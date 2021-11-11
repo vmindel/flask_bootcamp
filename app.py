@@ -23,10 +23,10 @@ def about():
 
 @app.route('/gene')
 def gene():
+    # TODO: delete the wrappers around the text and  the wrapper call itself
     wrapper = textwrap.TextWrapper(width=50)
     gene_req = request.args.get('text', '').upper()
     web = template
-
     if gene_req in gp.index:
         web = template + gp.loc[gene_req, 'sgd']
         word_list = 'Description:  ' + gp.loc[gene_req, 'desc']
