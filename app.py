@@ -38,6 +38,8 @@ def gene():
     else:
         word_list = wrapper.fill(text='No such gene in my Database')
         web = 'https://www.yeastgenome.org/'
+        gene_req = 'the Database'
+
     data = [{
         'name': gene_req,
         'info': word_list,
