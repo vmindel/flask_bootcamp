@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="home">
+    <h1>Yeast Genes Database</h1>
+    <p>This website was built with Python via the Flask framework.</p>
+    <p>Enter the gene you are interested in:</p>
+
+     <form action="/gene" method="GET">
+         <input name="text" placeholder="{{data.place_hold}}">
+         <input type="submit" value="GIVE me info!!">
+     </form>
+  </div>
+{% endblock %}

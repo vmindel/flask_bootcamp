@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="gene">
+    <h1>
+      Info for
+      {% for item in data %}
+      {{item.name}}
+      {% endfor %}
+
+    </h1>
+    <p>The data provided is from Vova's database.</p>
+    <ul>
+    {% for item in data %}
+        <li>{{item.info}}</li>
+      <li>For more info visit SGD database- <a href={{item.web}}>{{item.name}}</a></li>
+    {% endfor %}
+    </ul>
+
+  </div>
+{% endblock %}
